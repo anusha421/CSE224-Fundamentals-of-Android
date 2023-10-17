@@ -63,10 +63,4 @@ class MainActivity : ComponentActivity() {
         }
         return true
     }
-    companion object {
-        const val KEY_TITLE = "title"
-        const val KEY_PRICE = "price"
-        const val KEY_IMAGE = "image"
-        const val KEY_CATEGORY = "category"
-    }
 }
