@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.ClothingMenu." parent="android:ThemeOverlay.Material.ActionBar">
+        <item name="android:statusBarColor">@color/lightgreen</item>
+        <item name="android:colorPrimary">@color/green</item>
+    </style>
+</resources>

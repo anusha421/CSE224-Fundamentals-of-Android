@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Clothing Menu</string>
+    <string name="filter_pant">Filter: Pants</string>
+    <string name="filter_all">Filter: All</string>
+    <string name="filter_shirt">Filter: Shirts</string>
+    <string name="filter_accessories">Filter: Accessories</string>
+</resources>
