@@ -2,10 +2,10 @@
 
 ## Screenshots
 
-[default list](screenshots/default.png)  
-[add item](screenshots/additem.png)  
-[update list](screenshots/updatedlist.png)  
-[deleted item](screenshots/deleteditem.png)  
+![default list](screenshots/default.png)  
+![add item](screenshots/additem.png)  
+![update list](screenshots/updatedlist.png)  
+![deleted item](screenshots/deleteditem.png)  
 
 ## Features
 
