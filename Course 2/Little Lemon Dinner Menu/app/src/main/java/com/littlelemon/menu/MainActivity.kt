@@ -1,6 +1,5 @@
 package com.littlelemon.menu
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -15,20 +14,13 @@ import kotlinx.coroutines.flow.update
 
 class MainActivity : ComponentActivity() {
     private val productsList = mutableListOf(
-        ProductItem("Black tea", 3.00, "Drinks", R.drawable.black_tea),
-        ProductItem("Green tea", 3.00, "Drinks", R.drawable.green_tea),
-        ProductItem("Espresso", 5.00, "Drinks", R.drawable.espresso),
-        ProductItem("Cappuccino", 8.00, "Drinks", R.drawable.cappuccino),
-        ProductItem("Latte", 8.00, "Drinks", R.drawable.latte),
-        ProductItem("Mocha", 10.00, "Drinks", R.drawable.mocha),
-        ProductItem("Boeuf bourguignon", 15.00, "Food", R.drawable.boeuf_bourguignon),
-        ProductItem("Bouillabaisse", 20.00, "Food", R.drawable.bouillabaisse),
-        ProductItem("Lasagna", 15.00, "Food", R.drawable.lasagna),
-        ProductItem("Onion soup", 12.00, "Food", R.drawable.onion_soup),
-        ProductItem("Salmon en papillae", 25.00, "Food", R.drawable.salmon_en_papillote),
-        ProductItem("Quiche Lorraine", 17.00, "Dessert", R.drawable.quiche_lorraine),
-        ProductItem("Custard tart", 14.00, "Dessert", R.drawable.custard_tart),
-        ProductItem("Croissant", 7.00, "Dessert", R.drawable.croissant),
+        ProductItem("Cargo Pant", 33.00, "Pant", R.drawable.cargo_pant),
+        ProductItem("Grey Trouser", 43.00, "Pant", R.drawable.grey_trouser),
+        ProductItem("Khaki Pant", 90.00, "Pant", R.drawable.khaki_pant),
+        ProductItem("Scarf", 81.00, "Accessories", R.drawable.scarf),
+        ProductItem("Shirt", 34.00, "Shirt", R.drawable.shirt),
+        ProductItem("T Shirt", 10.00, "Shirt", R.drawable.t_shirt),
+        ProductItem("Wide Leg Pant", 50.00, "Pant", R.drawable.wide_leg_pant),
     )
 
     private val productsState: MutableStateFlow<Products> =
@@ -42,17 +34,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun InitUI() {
         val products by productsState.collectAsState()
-        ProductsGrid(products = products, this::startProductActivity)
-    }
-
-    private fun startProductActivity(productItem: ProductItem) {
-        val intent = Intent(this, ProductActivity::class.java)
-        intent.putExtra(KEY_TITLE, productItem.title)
-        intent.putExtra(KEY_PRICE, productItem.price)
-        intent.putExtra(KEY_IMAGE, productItem.image)
-        intent.putExtra(KEY_CATEGORY, productItem.category)
-
-        startActivity(intent)
+        ProductsGrid(products = products)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -62,27 +44,12 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.groupId == R.id.sorting) {
-            val type = when (item.itemId) {
-                R.id.sort_a_z -> SortType.Alphabetically
-                R.id.sort_price_asc -> SortType.PriceAsc
-                R.id.sort_price_desc -> SortType.PriceDesc
-                else -> SortType.Alphabetically
-            }
-            productsState.update {
-                Products(
-                    SortHelper().sortProducts(
-                        type,
-                        productsList
-                    )
-                )
-            }
-        } else if (item.groupId == R.id.filter) {
+        if (item.groupId == R.id.filter) {
             val type = when (item.itemId) {
                 R.id.filter_all -> FilterType.All
-                R.id.filter_drinks -> FilterType.Drinks
-                R.id.filter_food -> FilterType.Food
-                R.id.filter_dessert -> FilterType.Dessert
+                R.id.filter_pant -> FilterType.Pant
+                R.id.filter_shirt -> FilterType.Shirt
+                R.id.filter_accessories -> FilterType.Accessories
                 else -> FilterType.All
             }
             productsState.update {

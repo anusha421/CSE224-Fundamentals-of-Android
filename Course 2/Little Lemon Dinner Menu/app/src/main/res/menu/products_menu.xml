@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:id="@+id/sorting">
-        <item
-            android:id="@+id/sort_a_z"
-            android:title="@string/sort_a_z" />
-        <item
-            android:id="@+id/sort_price_asc"
-            android:title="@string/sort_price_ascending" />
-        <item
-            android:id="@+id/sort_price_desc"
-            android:title="@string/sort_price_descending" />
-    </group>
 
     <group android:id="@+id/filter">
         <item
             android:id="@+id/filter_all"
             android:title="@string/filter_all" />
         <item
-            android:id="@+id/filter_drinks"
-            android:title="@string/filter_drinks" />
+            android:id="@+id/filter_pant"
+            android:title="@string/filter_pant" />
         <item
-            android:id="@+id/filter_food"
-            android:title="@string/filter_food" />
+            android:id="@+id/filter_shirt"
+            android:title="@string/filter_shirt" />
         <item
-            android:id="@+id/filter_dessert"
-            android:title="@string/filter_dessert" />
+            android:id="@+id/filter_accessories"
+            android:title="@string/filter_accessories" />
     </group>
 </menu>

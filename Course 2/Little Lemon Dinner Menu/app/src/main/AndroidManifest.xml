@@ -27,10 +27,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ProductActivity"
-            android:exported="true"
-            android:theme="@style/Theme.LittleLemonMenu" />
     </application>
 
 </manifest>
