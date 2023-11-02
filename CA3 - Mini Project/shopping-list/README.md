@@ -3,13 +3,13 @@
 ## Screenshots
 
 ![default list](screenshots/default.png)  
-Default List  
+### Default List  
 ![add item](screenshots/additem.png)  
-Add new shopping item  
+### Add new shopping item  
 ![update list](screenshots/updatedlist.png)  
-Update list  
+### Update list  
 ![deleted item](screenshots/deleteditem.png)  
-List after deleting item  
+### List after deleting item  
 
 ## Features
 
