@@ -7,7 +7,7 @@
 ![add item](screenshots/additem.png)  
 ### Add new shopping item  
 ![update list](screenshots/updatedlist.png)  
-### Update list  
+### Updated list  
 ![deleted item](screenshots/deleteditem.png)  
 ### List after deleting item  
 
